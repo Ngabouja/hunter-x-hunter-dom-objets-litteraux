@@ -1114,11 +1114,17 @@ function creerCarte(nombre, nom, description, img, rank) {
 	noir.classList.add("noir");
 	color.classList.add("color");
 	dashed.classList.add("dashed");
-	//src alt textContent
+	dashed1.classList.add("dashed1");
+	colora.classList.add("color-1");
+	colorb.classList.add("color-2");
 
+	ha.textContent = nombre;
+	hb.textContent = nom;
+	hc.textContent = rank;
 	p.textContent = description;
 
 	image.src = img;
+	image.alt = img;
 
 	noir.appendChild(color);
 	noir.appendChild(colora);
@@ -1139,12 +1145,16 @@ function creerCarte(nombre, nom, description, img, rank) {
 	return noir;
 }
 
-const carte = creerCarte(
-	"001",
-	"test",
-	"descriptuon....",
-	"./assets/000.png",
-	"SS-3"
-);
+for (let i = 0; i < cards.length; i++) {
+	let carte = cards[i];
 
-menu2.appendChild(carte);
+	let nouvelleCarte = creerCarte(
+		carte.number,
+		carte.name,
+		carte.description,
+		carte.image,
+		carte.rank
+	);
+
+	menu2.appendChild(nouvelleCarte);
+}

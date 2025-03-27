@@ -22,29 +22,29 @@ hr {
 }
 
 .menu-2 {
-	display: flex;
-	align-items: center;
-	justify-items: center;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
 }
 
 .noir {
 	background-color: rgba(0, 0, 0, 1);
-	height: 65vh;
-	width: 88vw;
 	border-radius: 12px;
-	display: flex;
 	flex-direction: column;
 	margin: 18px;
 	gap: 10px;
 	padding: 6px;
+	max-width: 550px;
+	gap: 50px;
+	display: flex;
+	padding: 18px;
 }
 .color {
 	border-radius: 21px;
-	height: 33px;
 	background: #d9d9d9;
 	margin: 15px;
 	display: flex;
-	font-size: 14px;
+	justify-content: space-around;
 }
 
 .dashed {
@@ -64,7 +64,7 @@ img {
 }
 .color-2 {
 	background-color: #d9d9d9;
-	border: 1px solid
+	/* border: 1px solid
 		linear-gradient(
 			to right,
 			#000000,
@@ -73,11 +73,15 @@ img {
 			#000000,
 			#0084a8,
 			#0015ff
-		);
+		); */
 }
 
 .dashed1 {
 	font-size: 11px;
 	width: max-content;
 	border: 5px dashed black;
+}
+
+p{
+	text-align: center;
 }
